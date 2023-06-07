@@ -1,0 +1,47 @@
+[33mcommit 3fc74d9e0ce98a12516cb0ab6dbbb719d8301e36[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: mc <dyd97wns@naver.com>
+Date:   Wed Jun 7 22:28:10 2023 +0900
+
+    env update
+
+[33mcommit cabe1c347dc1d92a9c1d5793c1712c8b465211bd[m
+Author: mc <dyd97wns@naver.com>
+Date:   Wed Jun 7 22:13:00 2023 +0900
+
+    env plus
+
+[33mcommit 5d53c4826744ba0ef33add61f7d118b36862e240[m
+Author: mc <dyd97wns@naver.com>
+Date:   Wed Jun 7 19:04:23 2023 +0900
+
+    login register page end
+
+[33mcommit 5624d8457fcb8ad7a9d11df810aee791af5cd10e[m
+Author: mc <dyd97wns@naver.com>
+Date:   Mon Jun 5 23:31:16 2023 +0900
+
+    mongoDB url env
+
+[33mcommit 26e2349fee9f82b2279044c1a6a46b09e9de1e62[m
+Author: mc <dyd97wns@naver.com>
+Date:   Mon Jun 5 21:58:43 2023 +0900
+
+    list add remove new edit end
+
+[33mcommit a7cd5aea40e1b2602ef58da53c2303c13352cb13[m
+Author: mc <dyd97wns@naver.com>
+Date:   Sat Jun 3 21:26:07 2023 +0900
+
+    listboard css end
+
+[33mcommit 9b6e6a425f1f42ff472611adf13cebb8682191ff[m
+Author: mc <dyd97wns@naver.com>
+Date:   Sat Jun 3 00:03:02 2023 +0900
+
+    listboard
+
+[33mcommit 76af5696c077339404927ec3fbc70283f60dccfc[m
+Author: mc <dyd97wns@naver.com>
+Date:   Fri Jun 2 15:53:34 2023 +0900
+
+    Initial commit from Create Next App
