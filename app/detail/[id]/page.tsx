@@ -4,14 +4,11 @@ import { WithId, Collection } from 'mongodb';
 import Comment from './comment'
 
 import Notfound from './notfound';
+import { Post } from '@/util/types'
 
-interface Post {
-  _id: ObjectId;
-  title: string;
-  content: string;
-}
 
 export default async function Detail(props: { params: { id: string } }) {
+
   
   const client = await connectDB();
   const db = client.db('practsx');

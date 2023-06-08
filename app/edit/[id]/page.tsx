@@ -1,12 +1,7 @@
 import { connectDB } from '@/util/database';
 import { ObjectId } from 'bson';
 import { WithId, Collection } from 'mongodb';
-
-interface Post {
-  _id: ObjectId;
-  title: string;
-  content: string;
-}
+import { Post } from '@/util/types'
 
 export default async function Edit(props: { params: { id: string } }) {
   

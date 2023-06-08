@@ -5,12 +5,8 @@ import GithubProvider from "next-auth/providers/github";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from 'bcrypt';
 
-interface User {
-  id: string;
-  name: string;
-  email: string;
-  password: string; // password 속성 추가
-}
+import { User } from '@/util/types'
+
 
 const {
   GITLOGIN_clientId,

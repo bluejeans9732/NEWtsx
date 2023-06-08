@@ -2,17 +2,13 @@
 
 import { ObjectId } from 'bson';
 import Link from 'next/link';
+import { Postprops } from '@/util/types'
 
 
-interface Post {
-  _id: ObjectId | string;
-  title: string;
-  content: string;
-}
 
 
 export interface ArticleslistProps {
-  result: Post[];
+  result: Postprops[];
 }
 
 export function Articleslist(props: ArticleslistProps) {

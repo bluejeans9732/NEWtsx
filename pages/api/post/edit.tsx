@@ -3,11 +3,9 @@ import { ObjectId } from 'bson';
 import { WithId, Collection } from 'mongodb';
 import { NextApiRequest, NextApiResponse } from 'next';
 
-interface Post {
-    _id: ObjectId;
-    title: string;
-    content: string;
-}
+import { Post } from '@/util/types'
+
+
 
 export default async function Edit(요청: NextApiRequest, 응답: NextApiResponse): Promise<void> {
     
