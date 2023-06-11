@@ -1,9 +1,9 @@
 import { connectDB } from '@/util/database'
-import { ObjectId } from 'bson';
 import { WithId, Collection } from 'mongodb';
 import { Articleslist } from './articleslist';
 
 import { Postprops } from '@/util/types'
+
 
 
 export default async function articles() {
