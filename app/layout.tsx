@@ -38,6 +38,9 @@ export default async function RootLayout({
               <Link href="/articles">
                 <div className='ml-[20px]'>리스트</div>
               </Link>
+              <Link href="/fcmalert">
+                <div className='ml-[20px]'>FCM알람</div>
+              </Link>
             </div>
             {
               (!USER_NAME) ? 

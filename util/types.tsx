@@ -18,3 +18,10 @@ export interface User {
     email: string;
     password: string; // password 속성 추가
 }
+
+export interface Payload {
+  notification: {
+    title: string;
+    body: string;
+  }
+}

@@ -5,6 +5,10 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getMessaging, onMessage, MessagePayload } from "firebase/messaging";
 
+import AlertComp from './alertComp'
+import { Payload } from '@/util/types'
+
+
 const FcmAlert = () => {
 
   const firebaseConfig = {
@@ -23,45 +27,7 @@ const FcmAlert = () => {
 
   
 
-  interface Payload {
-    notification: {
-      title: string;
-      body: string;
-    }
-  }
 
-  const [registrationToken, setRegistrationToken] = useState('');
-  const [title, setTitle] = useState('');
-  const [body, setBody] = useState('');
-  const [clickUrl, setClickUrl] = useState('');
-
-  const sendNotification = async () => {
-    const url = '/api/fcm/alert';
-
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ registrationToken, title, body }),
-    });
-
-    if (response.ok) {
-      console.log('Notification was successfully sent.');
-      // 알림 권한 요청
-      if (Notification.permission !== 'granted') {
-        Notification.requestPermission().then(function (permission) {
-          if (permission === 'granted') {
-            console.log('Notification permission granted.');
-          } else {
-            console.log('Notification permission denied.');
-          }
-        });
-      }
-    } else {
-      console.error('An error occurred while sending the notification.');
-    }
-  };
 
   useEffect(() => {
     onMessage(firebaseMessaging, (payload: MessagePayload) => {
@@ -79,27 +45,7 @@ const FcmAlert = () => {
   }, []);
 
   return (
-    <div>
-      <input
-        type="text"
-        value={registrationToken}
-        onChange={(e) => setRegistrationToken(e.target.value)}
-        placeholder="Registration Token"
-      />
-      <input
-        type="text"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        placeholder="Title"
-      />
-      <input
-        type="text"
-        value={body}
-        onChange={(e) => setBody(e.target.value)}
-        placeholder="Body"
-      />
-      <button onClick={sendNotification}>Send Notification</button>
-    </div>
+    <AlertComp />
   );
 };
 
