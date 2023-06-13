@@ -14,11 +14,15 @@ const {
   SECRETKEY
 } = process.env;
 
+if (!GITLOGIN_clientId || !GITLOGIN_clientSecret) {
+  throw new Error("Client ID or secret not provided");
+}
+
 export const authOptions: NextAuthOptions = {
   providers: [
     GithubProvider({
-      clientId: GITLOGIN_clientId!,
-      clientSecret: GITLOGIN_clientSecret!,
+      clientId: GITLOGIN_clientId,
+      clientSecret: GITLOGIN_clientSecret,
     }),
     CredentialsProvider({
       name: "credentials",

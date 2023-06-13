@@ -25,9 +25,6 @@ const FcmAlert = () => {
   const analytics = getAnalytics(app);
   const firebaseMessaging = getMessaging(app);
 
-  
-
-
 
   useEffect(() => {
     onMessage(firebaseMessaging, (payload: MessagePayload) => {
