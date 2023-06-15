@@ -4,8 +4,10 @@ import NextAuth, { NextAuthOptions } from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from 'bcrypt';
-
+//타입 import
 import { User } from '@/util/types'
+import { CustomUser } from '@/util/types'
+
 
 
 const {
@@ -56,18 +58,18 @@ export const authOptions: NextAuthOptions = {
     maxAge: 30 * 24 * 60 * 60 // 30 days
   },
   callbacks: {
-    jwt: async ({ token, user }: { token: any, user: any }) => {
+    jwt: async ({ token, user }) => {
       if (user) {
         token.user = {
           name: user.name,
           email: user.email,
-          image: user.image // 필요에 따라 추가
-        };
+          image: user.image
+        } as CustomUser;
       }
       return token;
     },
-    session: async ({ session, token }: { session: any, token: any }) => {
-      session.user = token.user;
+    session: async ({ session, token }) => {
+      session.user = token.user as CustomUser;
       return session;
     },
   },
