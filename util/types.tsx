@@ -25,3 +25,9 @@ export interface Payload {
     body: string;
   }
 }
+
+export interface CustomUser {
+  name: string | null | undefined;
+  email: string | null | undefined;
+  image: string | null | undefined;
+}
