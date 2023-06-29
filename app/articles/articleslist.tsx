@@ -20,7 +20,10 @@ export function Articleslist(props: ArticleslistProps) {
         <p>게시글이 없어요</p>
       ) : (
         result.map((item) => (
-          <div key={item._id.toString()} className='pt-4 h-[120px] mt-4 mb-4 border-2 w-[50%] mx-auto rounded-lg bg-emerald-300/50 border-violet-200 flex flex-col justify-center items-center font-bold'>
+          <div 
+            key={item._id.toString()} 
+            className='pt-4 h-[120px] mt-4 mb-4 border-2 w-[50%] mx-auto rounded-lg border-gray-200 flex flex-col justify-center items-center font-bold'
+          >
             <Link href={`/detail/${item._id.toString()}`}>{item.title}</Link>
 
             <div className='flex mt-4'>

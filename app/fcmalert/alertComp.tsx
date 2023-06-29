@@ -37,8 +37,8 @@ export default function AlertComp () {
     
 
     return (
-        <div  className='flex items-center justify-center h-screen bg-gradient-to-br from-gray-50 to-gray-100'>
-            <div className='w-1/3 h-[40%] p-4 rounded-xl  shadow-xl bg-white flex flex-col'>
+        <div className='flex pt-[100px] justify-center h-screen bg-gradient-to-br from-gray-50 to-gray-100'>
+            <div className='w-1/3 h-[45%] p-4 rounded-xl  shadow-xl bg-white flex flex-col'>
                 <h4 className='mt-4 mb-3 text-center text-2xl text-cyan-900 font-bold'>알람 보내기</h4>
                 <input
                     type="text"
