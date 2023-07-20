@@ -4,8 +4,6 @@ import { Articleslist } from './articleslist';
 
 import { Postprops } from '@/util/types'
 
-
-
 export default async function articles() {
   const client = await connectDB();
   const db = client.db('practsx')
@@ -17,7 +15,7 @@ export default async function articles() {
     a._id = a._id.toString();
     return a;
   });
-  
+
   return (
     <div className="w-[50%] mx-auto ">
       <Articleslist result={result}/>

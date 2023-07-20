@@ -14,6 +14,8 @@ export interface ArticleslistProps {
 export function Articleslist(props: ArticleslistProps) {
   const { result } = props;
 
+  
+
   return (
     <div className=''>
       {result.length === 0 ? (
